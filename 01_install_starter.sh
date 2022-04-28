@@ -15,7 +15,7 @@ ${SUDO} chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # add some new lines to ~/.zshrc (this part actually needs to be tested)
-echo " "
+echo " " >> ~/.zshrc
 echo " \# some new adds of mine " >> ~/.zshrc
 echo " alias ls='ls -ailsh --color' " >> ~/.zshrc
 echo " alias lx='exa -lRTL=2' " >> ~/.zshrc
