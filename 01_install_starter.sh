@@ -6,7 +6,7 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 # some might already be installed, depending on your distribution
-${SUDO} apt -y install apticron ccze cowsay curl dnsutils exa fortunes git htop neofetch net-tools rsync sudo tmux whois zsh
+${SUDO} apt -y install apticron ccze cowsay curl dnsutils exa fortunes fusioninventory-agent git htop neofetch net-tools rsync sudo tmux whois zsh
 
 # set ZSH up as your default shell
 ${SUDO} chsh -s $(which zsh)
