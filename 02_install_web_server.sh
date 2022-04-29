@@ -32,9 +32,15 @@ ${SUDO} apt install -y php7.4-cli php7.4-common php7.4-curl php7.4-fpm php7.4-gd
 # as we installed mariadb-server we assume you'll want to secure it a bit
 ${SUDO} mysql_secure_installation
 
+# Installing adminer (https://adminer.org)
+# v 4.8.1 for instance
+cd /var/www/html/
+${SUDO} wget https://github.com/vrana/adminer/releases/download/v4.8.1/adminer-4.8.1.php -O admnr.php
+
 # then, to configure all that shit, just go to
 # https://www.geek17.com/fr/content/debian-11-bullseye-installer-et-configurer-la-derniere-version-de-php-8-fpm-avec-nginx-121
 # and follow instructions
+
 
 ## CERTBOT LET'S ENCRYPT
 # As we're installing a web server, we also presume that you'll want HTTPS
