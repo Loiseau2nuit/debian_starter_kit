@@ -16,13 +16,13 @@ ${SUDO} apt update
 ${SUDO} apt install -y nginx mariadb-server
 
 ## PHP 8.1 : Active support => 25 Nov 2023
-${SUDO} apt install -y php8.1-cli php8.1-common php8.1-curl php8.1-fpm php8.1-gd php8.1-imagick php8.1-imap php8.1-intl php8.1-ldap php8.1-mbstring php8.1-mysql php8.1-opcache php8.1-readline php8.1-xml php8.1-zip
+${SUDO} apt install -y php8.1-bz2 php8.1-cli php8.1-common php8.1-curl php8.1-fpm php8.1-gd php8.1-imagick php8.1-imap php8.1-intl php8.1-ldap php8.1-mbstring php8.1-mysql php8.1-opcache php8.1-readline php8.1-xml php8.1-zip
 
 ## PHP 8.0 : Active support => 26 Nov 2022
-${SUDO} apt install -y php8.0-cli php8.0-common php8.0-curl php8.0-fpm php8.0-gd php8.0-imagick php8.0-imap php8.0-intl php8.0-ldap php8.0-mbstring php8.0-mysql php8.0-opcache php8.0-readline php8.0-xml php8.0-zip
+${SUDO} apt install -y php8.0-bz2 php8.0-cli php8.0-common php8.0-curl php8.0-fpm php8.0-gd php8.0-imagick php8.0-imap php8.0-intl php8.0-ldap php8.0-mbstring php8.0-mysql php8.0-opcache php8.0-readline php8.0-xml php8.0-zip
 
 ## PHP 7.4 : Security fixes only => 28 Nov 2022
-${SUDO} apt install -y php7.4-cli php7.4-common php7.4-curl php7.4-fpm php7.4-gd php7.4-imagick php7.4-imap php7.4-intl php7.4-json php7.4-ldap php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-readline php7.4-xml php7.4-zip
+${SUDO} apt install -y  php7.4-bz2 php7.4-cli php7.4-common php7.4-curl php7.4-fpm php7.4-gd php7.4-imagick php7.4-imap php7.4-intl php7.4-json php7.4-ldap php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-readline php7.4-xml php7.4-zip
 
 ## you can add some more ...
 # ${SUDO} apt install -y <previous_version_here>
