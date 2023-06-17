@@ -22,10 +22,10 @@ should be the first script you execute.
 It sets whole debian environment up.
 
 In that case, it mainly brings :
-- ZSH instead of bash, with OhMyZSH additional tools for it's simplicity and aesthetics purposes
+- ZSH instead of bash, with OhMyZSH additional tools for it's simplicity and aesthetics purposes (see https://ohmyz.sh/)
 - A personalized shell (with neofetch and some OhMyZsh plugins)
-- some tools to improve UX (exa instead of ls; ccze to get colorized logs, htop instead of top, ...
-- some usefull network CLIs that are not installed by default with debian
+- some tools to improve UX : exa (https://the.exa.website/) instead of ls; htop (https://htop.dev/) instead of top, ...
+- some usefull network tools & CLIs that are not shipped by default with debian (whois, rsync, nettools, ...)
 
 Then, when everything is set up, you could execute following scripts in any order you want (well, basically today there are only one of them ;-D)
 
