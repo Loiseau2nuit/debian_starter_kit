@@ -1,11 +1,13 @@
 # debian_starter_kit
-Set your VPS up in minutes
+Complete your Debian server up in minutes!
 
 ## What's this ?
 
-Some usefull scripts to run after installing a debian VPS.
+Some usefull scripts to run after installing a debian dedicated server, VM or VPS.
 
-It basically brings in a few scripts the tools you need to run any VPS server running on latest Debian release (Debian 11 Bullseye to this day)
+It implies that the OS is already installed and the machine is up & running (which is mostly the case when you work on an infrastructure with deployment facilities). If not, you'll have to set your server up before executing those.
+
+It basically brings, through a few scripts, the additional tools you might need to run on any Debian server such as : common dependencies, improved CLIs or utilities tools, or whatever you like to have on basically any server that is not installed by default. This is mainly what me, myself and I 'd like to have on a server after the OS is up, but feel free to personalize it before you run it.
 
 Those scripts do not configure anything (yet). They just install the needed packages, and YOU should check their documentations in order to get them to suit your needs.
 
