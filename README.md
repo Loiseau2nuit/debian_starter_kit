@@ -7,17 +7,15 @@ Some usefull scripts to run after installing a debian dedicated server, VM or VP
 
 It implies that the OS is already installed and the machine is up & running (which is mostly the case when you work on an infrastructure with deployment facilities). If not, you'll have to set your server up before executing those.
 
-It basically brings, through a few scripts, the additional tools you might need to run on any Debian server such as : common dependencies, improved CLIs or utilities tools, or whatever you like to have on basically any server that is not installed by default. This is mainly what me, myself and I 'd like to have on a server after the OS is up, but feel free to personalize it before you run it.
+It basically brings, through a few scripts, the additional tools you might need to run on any Debian server such as : common dependencies, improved CLIs or utilities tools, or whatever you like to have on basically any server that is not installed by default. Mainly designed for operating web servers, this is essentialy what me, myself and I 'd like to have on a server after the OS is up, but feel free to personalize them scripts before you use them.
 
 Those scripts do not configure anything (yet). They just install the needed packages, and YOU should check their documentations in order to get them to suit your needs.
 
 ## Instructions
 
-### Runing Order
+It's quite simple, just execute scripts, following their numbers, and your needs !
 
-It's quite simple, just follow the numbers !
-
-#### 01_install_starter.sh 
+### 01_install_starter.sh 
 
 should be the first script you execute.
 
