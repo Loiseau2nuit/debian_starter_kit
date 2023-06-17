@@ -15,9 +15,19 @@ Those scripts do not configure anything (yet). They just install the needed pack
 
 ### Runing Order
 
-01_install_starter.sh should be the first script you execute.
+It's quite simple, just follow the numbers !
 
-It sets up your whole debian environment.
+#### 01_install_starter.sh 
+
+should be the first script you execute.
+
+It sets whole debian environment up.
+
+In that case, it mainly brings :
+- ZSH instead of bash, with OhMyZSH additional tools for it's simplicity and aesthetics purposes
+- A personalized shell (with neofetch and some OhMyZsh plugins)
+- some tools to improve UX (exa instead of ls; ccze to get colorized logs, htop instead of top, ...
+- some usefull network CLIs that are not installed by default with debian
 
 Then, when everything is set up, you could execute following scripts in any order you want (well, basically today there are only one of them ;-D)
 
