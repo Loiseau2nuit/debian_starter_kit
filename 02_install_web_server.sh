@@ -35,10 +35,16 @@ ${SUDO} apt install -y php8.1-fpm
 # as we installed mariadb-server we assume you'll want to secure it a bit
 ${SUDO} mysql_secure_installation
 
-# Installing adminer (https://adminer.org)
-# v 4.8.1 for instance
-cd /var/www/html/
-${SUDO} wget https://github.com/vrana/adminer/releases/download/v4.8.1/adminer-4.8.1.php -O admnr.php
+## Installing adminer (https://adminer.org)
+# Or maybe not ! As adminer seems to have been discontinued for 2 years now.
+# AdminerEvo is a fork which started as of July 2023 but let's be honnest, I'd rather use a local BDD client from now on
+# (like DBeaver for example). I'm just leaving those lines here to avoid regression. I'll let you choose & uncomment 
+# which one you really want if ever you want one
+#
+# cd /var/www/html/
+# ${SUDO} wget https://github.com/vrana/adminer/releases/download/v4.8.1/adminer-4.8.1.php -O admnr.php
+# or
+# ${SUDO} wget https://github.com/adminerevo/adminerevo/releases/download/v4.8.2/adminer-4.8.2.php -O admnr.php
 
 # then, to configure all that shit, just go to
 # https://www.geek17.com/fr/content/debian-11-bullseye-installer-et-configurer-la-derniere-version-de-php-8-fpm-avec-nginx-121
