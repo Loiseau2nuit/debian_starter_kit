@@ -7,29 +7,25 @@ if [ "$(whoami)" != "root" ]; then
     SUDO=sudo
 fi
 
-${SUDO} apt -y install apt-transport-https lsb-release ca-certificates curl
+${SUDO} apt-get -y install apt-transport-https lsb-release ca-certificates curl
 ${SUDO} wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 ${SUDO} sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
-${SUDO} apt update
+${SUDO} apt-get update
 
 ## NGINX + MARIADB
-${SUDO} apt install -y nginx mariadb-server
+${SUDO} apt-get install -y nginx mariadb-server
 
 ## PHP 8.2 : EOL 8 Dec 2025
-${SUDO} apt install -y php8.2-cli php8.2-common php8.2-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
-${SUDO} apt install -y php8.2-fpm
+${SUDO} apt-get install -y php8.2-cli php8.2-common php8.2-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
+${SUDO} apt-get install -y php8.2-fpm
+
+## you can add other php versions, if needed :
 
 ## PHP 8.1 : EOL 25 Nov 2024
-${SUDO} apt install -y php8.1-cli php8.1-common php8.1-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
-${SUDO} apt install -y php8.1-fpm
+# ${SUDO} apt-get install -y php8.1-cli php8.1-common php8.1-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
+# ${SUDO} apt-get install -y php8.1-fpm
 
-## you can add some more, for exemple :
 
-## PHP 8.0 : EOL (Sec fixes only) 26 Nov 2023
-# ${SUDO} apt install -y php8.0-cli php8.0-common php8.0-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
-# ${SUDO} apt install -y php8.0-fpm
-
-# but there's a special place in hell for people like you !
 
 ## SECURING MYSQL
 # as we installed mariadb-server we assume you'll want to secure it a bit
@@ -55,7 +51,7 @@ ${SUDO} mysql_secure_installation
 # As we're installing a web server, we also presume that you'll want HTTPS
 # comment the following lines if you don't
 # source : https://certbot.eff.org/instructions?ws=nginx&os=debiantesting
-${SUDO} apt install -y snapd
+${SUDO} apt-get install -y snapd
 ${SUDO} snap install core
 ${SUDO} snap refresh core
 ${SUDO} snap install --classic certbot
