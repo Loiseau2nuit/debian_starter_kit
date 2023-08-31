@@ -38,6 +38,7 @@ ${SUDO} sed -i 's/non-free/non-free non-free-firmware/g' /etc/apt/sources.list.d
 # switch to new distribution
 # keeping every modified by config file as is (new one suffixed .dpkg-dist if needed later)
 # see https://raphaelhertzog.com/2010/09/21/debian-conffile-configuration-file-managed-by-dpkg/#:~:text=Avoiding%20the%20conffile%20prompt
+${SUDO} apt-get update
 ${SUDO} apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade -y
 
 # We're good for a reboot
