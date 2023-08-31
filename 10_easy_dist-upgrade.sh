@@ -21,7 +21,7 @@ files=("zabbix-agent2-plugins.list")
 for file in "${files[@]}"; do
     if [ -f "$directory/$file" ]; then
         echo "$file is being isolated"
-        ${SUDO} rm -rf $file
+        ${SUDO} rm -f $file
     else
         echo "no $file found. Resuming ..."
     fi
@@ -39,7 +39,7 @@ ${SUDO} sed -i 's/non-free/non-free non-free-firmware/g' /etc/apt/sources.list.d
 # keeping every modified by config file as is (new one suffixed .dpkg-dist if needed later)
 # see https://raphaelhertzog.com/2010/09/21/debian-conffile-configuration-file-managed-by-dpkg/#:~:text=Avoiding%20the%20conffile%20prompt
 ${SUDO} apt-get update
-${SUDO} apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade -y
+DEBIAN_FRONTEND=noninteractive ${SUDO} -E apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade -y
 
 # We're good for a reboot
 ${SUDO} reboot
