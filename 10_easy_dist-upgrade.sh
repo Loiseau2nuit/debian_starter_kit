@@ -1,6 +1,6 @@
 #!/bin/bash
 # easy dist-upgrade Debian 11 to Debian 12
-# scripted from https://www.it-connect.fr/automatiser-le-processus-de-mise-a-jour-apt-sur-debian/
+# scripted from https://www.it-connect.fr/tuto-mise-a-niveau-debian-11-vers-debian-12-bookworm/
 #
 
 if [ "$(whoami)" != "root" ]; then
