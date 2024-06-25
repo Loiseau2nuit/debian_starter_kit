@@ -6,7 +6,12 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 # some might already be installed, depending on your distribution
-${SUDO} apt-get -y install apticron cowsay curl dnsutils exa fortunes git glpi-agent bpytop neofetch netcat-openbsd net-tools parted python3-pygments rsync screen sudo tmux whois zsh
+${SUDO} apt-get -y install apticron cowsay curl dnsutils exa fortunes git glpi-agent bpytop netcat-openbsd net-tools parted python3-pygments rsync screen sudo tmux whois zsh
+
+# fastfetch
+cd
+wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.16.0/fastfetch-linux-amd64.deb
+${SUDO} dpkg -i fastfetch-linux-amd64.deb
 
 # set ZSH up as your default shell
 ${SUDO} chsh -s $(which zsh)
@@ -26,7 +31,7 @@ echo " alias cp='cp -i' " >> ~/.zshrc
 echo "  " >> ~/.zshrc
 echo " cd ~ " >> ~/.zshrc
 echo " clear " >> ~/.zshrc
-echo " neofetch " >> ~/.zshrc
+echo " fastfetch " >> ~/.zshrc
 echo " echo \"=========================================================\" " >> ~/.zshrc
 echo " echo \"Checking for upgrades ...\" " >> ~/.zshrc
 echo " apt list --upgradable " >> ~/.zshrc
