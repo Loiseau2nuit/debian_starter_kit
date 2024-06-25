@@ -6,7 +6,7 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 # some might already be installed, depending on your distribution
-${SUDO} apt-get -y install apticron cowsay curl dnsutils exa fortunes git glpi-agent htop neofetch netcat-openbsd net-tools parted python3-pygments rsync screen sudo tmux whois zsh
+${SUDO} apt-get -y install apticron cowsay curl dnsutils exa fortunes git glpi-agent bpytop neofetch netcat-openbsd net-tools parted python3-pygments rsync screen sudo tmux whois zsh
 
 # set ZSH up as your default shell
 ${SUDO} chsh -s $(which zsh)
@@ -19,7 +19,7 @@ echo " " >> ~/.zshrc
 echo " \# some new adds of mine " >> ~/.zshrc
 echo " alias ls='ls -ailsh --color' " >> ~/.zshrc
 echo " alias lx='exa -lRTL=2' " >> ~/.zshrc
-echo " alias top='htop' " >> ~/.zshrc
+echo " alias top='bpytop' " >> ~/.zshrc
 echo " alias rm='rm -i' " >> ~/.zshrc
 echo " alias mv='mv -i' " >> ~/.zshrc
 echo " alias cp='cp -i' " >> ~/.zshrc
