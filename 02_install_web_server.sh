@@ -19,16 +19,15 @@ ${SUDO} apt-get install -y nginx mariadb-server
 ${SUDO} apt-get install -y php8.3-cli php8.3-common php8.3-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
 ${SUDO} apt-get install -y php8.3-fpm
 
-## PHP 8.2 : EOL 8 Dec 2025
-${SUDO} apt-get install -y php8.2-cli php8.2-common php8.2-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
-${SUDO} apt-get install -y php8.2-fpm
-
 ## you can add other php versions, if needed :
+
+## PHP 8.2 : EOL 8 Dec 2025
+# ${SUDO} apt-get install -y php8.2-cli php8.2-common php8.2-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
+# ${SUDO} apt-get install -y php8.2-fpm
 
 ## PHP 8.1 : EOL 25 Nov 2024
 # ${SUDO} apt-get install -y php8.1-cli php8.1-common php8.1-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
 # ${SUDO} apt-get install -y php8.1-fpm
-
 
 
 ## SECURING MYSQL
