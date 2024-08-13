@@ -45,6 +45,4 @@ DEBIAN_FRONTEND=noninteractive ${SUDO} -E apt-get -o Dpkg::Options::="--force-co
 ${SUDO} reboot
 
 # once the system has reboot, you should be 
-# cleaning old dependencies with
-# sudo apt autoremove --purge -y
-
+# executing https://github.com/Loiseau2nuit/system-update-and-cleanup-bash-script/blob/main/system_cleanup.sh
