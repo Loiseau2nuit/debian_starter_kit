@@ -45,4 +45,4 @@ DEBIAN_FRONTEND=noninteractive ${SUDO} -E apt-get -o Dpkg::Options::="--force-co
 ${SUDO} reboot
 
 # once the system has reboot, you should be 
-# executing https://github.com/Loiseau2nuit/system-update-and-cleanup-bash-script/blob/main/system_cleanup.sh
+# executing https://github.com/404GamerNotFound/system-update-and-cleanup-bash-script/blob/main/system_cleanup.sh
