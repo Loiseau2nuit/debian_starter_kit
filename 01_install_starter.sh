@@ -6,7 +6,12 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 # some might already be installed, depending on your distribution
-${SUDO} apt-get -y install apticron cowsay curl dnsutils exa fortunes glpi-agent bpytop netcat-openbsd net-tools parted python3-pygments rsync screen sudo tmux unzip whois zip zsh
+${SUDO} apt-get -y install apticron cowsay curl dnsutils exa fortunes bpytop netcat-openbsd net-tools parted python3-pygments rsync screen sudo tmux unzip whois zip zsh
+
+# glpi-agent
+cd
+wget https://github.com/glpi-project/glpi-agent/releases/download/1.11/glpi-agent_1.11-1_all.deb
+${SUDO} dpkg -i glpi-agent_1.11-1_all.deb
 
 # fastfetch
 cd
