@@ -6,7 +6,7 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 # some might already be installed, depending on your distribution
-${SUDO} apt-get -y install apticron cowsay curl dnsutils exa fortunes bpytop netcat-openbsd net-tools parted python3-pygments rsync screen sudo tmux unzip whois zip zsh
+${SUDO} apt-get -y install apticron cowsay curl dnsutils exa fail2ban fortunes bpytop netcat-openbsd net-tools parted python3-pygments rsync screen sudo tmux unzip whois zip zsh
 
 # glpi-agent
 cd
