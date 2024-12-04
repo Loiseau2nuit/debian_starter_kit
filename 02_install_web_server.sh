@@ -60,6 +60,7 @@ ${SUDO} snap refresh core
 ${SUDO} snap install --classic certbot
 ${SUDO} ln -s /snap/bin/certbot /usr/bin/certbot
 ${SUDO} snap set certbot trust-plugin-with-root=ok
+${SUDO} certbot --nginx
 
 # You might want to edit the following command, replacing <PLUGIN> with the name of your DNS provider, before you uncomment this line
 # see https://eff-certbot.readthedocs.io/en/stable/using.html#dns-plugins
