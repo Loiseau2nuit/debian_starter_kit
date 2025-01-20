@@ -15,19 +15,19 @@ ${SUDO} apt-get update
 ## NGINX + MARIADB
 ${SUDO} apt-get install -y nginx mariadb-server
 
-## PHP 8.3 : EOL 23 nov 2026
-${SUDO} apt-get install -y php8.3-cli php8.3-common php8.3-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
-${SUDO} apt-get install -y php8.3-fpm
+# PHP 8.4 : Active support 31 Dec. 2026 / Security support 31 Dec. 2028 
+${SUDO} apt-get install -y php8.4-cli php8.4-common php8.4-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
+${SUDO} apt-get install -y php8.4-fpm
 
 ## you can add other php versions, if needed :
 
-## PHP 8.2 : EOL 8 Dec 2025
+## PHP 8.3 : Active support 31 Dec. 2025 / Security support 31 Dec. 2027 
+# ${SUDO} apt-get install -y php8.3-cli php8.3-common php8.3-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
+# ${SUDO} apt-get install -y php8.3-fpm
+
+## PHP 8.2 : Active support 31 Dec. 2024 / Security support 31 Dec. 2026
 # ${SUDO} apt-get install -y php8.2-cli php8.2-common php8.2-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
 # ${SUDO} apt-get install -y php8.2-fpm
-
-## PHP 8.1 : EOL 25 Nov 2024
-# ${SUDO} apt-get install -y php8.1-cli php8.1-common php8.1-{apcu,bz2,curl,gd,imagick,imap,intl,ldap,mbstring,mysql,opcache,readline,soap,xml,xmlrpc,zip}    
-# ${SUDO} apt-get install -y php8.1-fpm
 
 
 ## SECURING MYSQL
