@@ -1,15 +1,16 @@
 #!/bin/bash
-# widely inspired (and mostly copied) from :
-# https://packages.sury.org/php/README.txt
-# 'cause when it comes to IT, the lazier the better !
+# switching to https://packages.sury.org/ 
+# to get the latest possible nginx & php versions for debian
 #
 if [ "$(whoami)" != "root" ]; then
     SUDO=sudo
 fi
 
 ${SUDO} apt-get -y install apt-transport-https lsb-release ca-certificates curl
-${SUDO} wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
-${SUDO} sh -c 'echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
+${SUDO} curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
+${SUDO} dpkg -i /tmp/debsuryorg-archive-keyring.deb
+${SUDO} sh -c 'echo "deb [signed-by=/usr/share/keyrings/debsuryorg-archive-keyring.gpg] https://packages.sury.org/nginx/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/nginx.list'
+${SUDO} sh -c 'echo "deb [signed-by=/usr/share/keyrings/debsuryorg-archive-keyring.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list'
 ${SUDO} apt-get update
 
 ## NGINX + MARIADB
